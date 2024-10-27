@@ -57,13 +57,25 @@ Il crée les objets, configure et assemble leurs dépendances, gère l'intégral
 ### Spring Beans
 Un Bean est un objet qui est instancié, assemblé et géré par Spring IoC Containe
 ### Bean Scopes
+Un bean géré par le conteneur possède une portée (scope).
+
+Pour un usage général, Spring propose deux portées :
+
+#### singleton : le conteneur ne peut avoir qu'une seule instance pour un identifiant de bean. Chaque fois qu'une instance du bean sera demandée, c'est cette unique instance qui sera renvoyée par le conteneur
+#### prototype : chaque fois qu'une instance du bean sera demandée, le conteneur va créer une nouvelle instance
+Spring propose d'autres portées notamment celles dédiées aux applications web (request, session et global-session).
+
+La portée est définie dans le fichier de configuration en utilisant l'attribut scope du tag <bean>. La valeur fournie est celle de la portée souhaitée (singleton ou prototype).
+
+Par défaut, les beans ont une portée singleton : la grande majorité des beans gérés dans un conteneur Spring sont généralement des singletons.
+
 
 ### ApplicationContext
-
+L'application context est une interface permettant d’obtenir différentes informations sur l'application Spring
 ### Component Scanning and Stereotype Annotations
 
 ### Spring Data JPA
-
+Spring Boot Data JPA permettant de créer des requêtes dynamiques avec des combinaisons très fluides.
 ### Spring MVC
-
+Spring MVC est un framework qui permet d’implémenter des applications selon le design pattern MVC.
 ### Installation and Setup

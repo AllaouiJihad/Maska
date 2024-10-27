@@ -1,46 +1,46 @@
-## SPRING FRAMEWORK
+## FRAMEWORK SPRING
+Cette application est un système de gestion d'utilisateurs 
+construit avec Spring Core (sans Spring Boot), 
+Spring MVC, et Spring Data JPA. Elle permet aux utilisateurs d'effectuer des opérations CRUD 
+comme la création, la consultation, la mise à jour et la suppression d'utilisateurs via une interface web.
 
-This application is a basic User Management System 
-built using Spring Core without Spring Boot, 
-Spring MVC, and Spring Data JPA. It allows users to perform CRUD operations 
-such as creating, viewing, updating, and deleting users through a web interface.
-
-## Table of Contents
-- [Project Structure](#project-structure)
-- [Dependency Injection (DI)](#dependency-injection-di)
-- [Inversion of Control (IoC)](#inversion-of-control-ioc)
-- [Spring Beans](#spring-beans)
-- [Bean Scopes](#bean-scopes)
+## Table des matières
+- [Structure du projet](#structure-du-projet)
+- [Injection de dépendances (DI)](#injection-de-dépendances-di)
+- [Inversion de contrôle (IoC)](#inversion-de-contrôle-ioc)
+- [Beans Spring](#beans-spring)
+- [Portées des beans](#portées-des-beans)
 - [ApplicationContext](#applicationcontext)
-- [Component Scanning and Stereotype Annotations](#component-scanning-and-stereotype-annotations)
+- [Scan des composants et annotations](#scan-des-composants-et-annotations)
 - [Spring Data JPA](#spring-data-jpa)
 - [Spring MVC](#spring-mvc)
-- [Installation and Setup](#installation-and-setup)
+- [Installation et configuration](#installation-et-configuration)
 
-### Overview of Spring Framework
-Spring is a powerful framework for building Java applications, especially web apps. It simplifies development by providing tools like dependency injection, aspect-oriented programming (AOP), and a flexible architecture, making it easier to manage code and improve efficiency.
-### Project Structure
+### Aperçu du Framework Spring
+Spring est un framework puissant pour développer des applications Java, particulièrement des applications web. Il simplifie le développement en fournissant des outils comme l'injection de dépendances, la programmation orientée aspect (AOP), et une architecture flexible, facilitant ainsi la gestion du code et l'amélioration de l'efficacité.
+
+### Structure du projet
 ```sh
 .
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── MBAREK0/
+│   │   │   └── fr/
+│   │   │       └── monprojet/
 │   │   │           └── web/
 │   │   │               ├── controller/
-│   │   │               │   └── MembreController.java
+│   │   │               │   └── UtilisateurController.java
 │   │   │               ├── entity/
-│   │   │               │   └── Membre.java
+│   │   │               │   └── Utilisateur.java
 │   │   │               ├── repository/
-│   │   │               │   └── MembreRepository.java
+│   │   │               │   └── UtilisateurRepository.java
 │   │   │               ├── services/
-│   │   │               │   └── MembreService.java
+│   │   │               │   └── UtilisateurService.java
 │   │   │               └── Main.java
 │   │   ├── webapp/
 │   │   │   └── WEB-INF/
 │   │   │       └── views/
-│   │   │           └── index.jsp
+│   │   │           └── utilisateurs.jsp
 │   │   │       ├── applicationContext.xml
 │   │   │       ├── dispatcher-servlet.xml
 │   │   │       └── web.xml
@@ -49,11 +49,13 @@ Spring is a powerful framework for building Java applications, especially web ap
 ```
 
 ### Dependency Injection (DI)
-
+Lorsqu’une classe (A) a besoin d’une autre classe (B) pour fonctionner, on dit que (A) a une dépendance vers (B) et que (B) est une dépendance pour (A).
+lorsqu’il devient nécessaire de modifier une des classes. En effet, avec le jeu des dépendances, il peut être alors nécessaire de modifier tout ou partie des classes qui dépendent de la classe modifiée.
 ### Inversion of Control (IoC)
-
+est un processus qui définit les dépendances d'un objet sans avoir à les créer.
+Il crée les objets, configure et assemble leurs dépendances, gère l'intégralité de leur cycle de vie. Le conteneur utilise l'injection de dépendances (DI) pour gérer les composants qui composent l'application.
 ### Spring Beans
-
+Un Bean est un objet qui est instancié, assemblé et géré par Spring IoC Containe
 ### Bean Scopes
 
 ### ApplicationContext
